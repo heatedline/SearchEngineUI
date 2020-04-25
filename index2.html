@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>Liquid Scope: Duel Masters Card Search</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="LSicon.ico" />
+
+<meta name="apple-mobile-web-app-title" content="Liquid Scope" />
+
+
+    <link rel="stylesheet" media="all" href="main.css" />
+  </head>
+  <body>
+
+    <div id="main" class="main" role="main">
+
+<h1>Liquid Scope: DM Advanced Search</h1>
+
+<form class="" novalidate="novalidate" action="/advanced" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="inner-flex">
+
+    <div class="form-row">
+
+      <label class="form-row-label" for="name">
+        Card Name
+</label>
+      <div class="form-row-content">
+        <div class="form-row-content-band">
+          <input type="text" name="name" id="name" class="form-input" placeholder="Words in the name, e.g. “Dragon”" autocorrect="off" spellcheck="false" />
+        </div>
+      </div>
+
+    </div>
+    <div class="form-row">
+
+      <label class="form-row-label" for="mana">
+        Mana Cost
+</label>
+      <div class="form-row-content">
+
+        <div class="form-row-content-band">
+          <input type="number" name="mana" id="mana" class="form-input short" placeholder="Enter Mana Cost" autocorrect="off" spellcheck="false" />
+          </div>
+        </div>
+      </div>
+    <div class="form-row">
+
+      <label class="form-row-label" for="name">
+        Race/Subtype
+</label>
+      <div class="form-row-content">
+        <div class="form-row-content-band">
+          <input type="text" name="race" id="name" class="form-input" placeholder="E.g. “Jokers”" autocorrect="off" spellcheck="false" />
+        </div>
+      </div>
+
+    </div>
+    <div class="form-row">
+
+      <label class="form-row-label" for="oracle">
+        Card Text
+</label>
+      <div class="form-row-content">
+
+        <div class="form-row-content-band">
+          <input type="text" placeholder="Any text, e.g. “draw a card”" class="form-input" autocorrect="off" spellcheck="false" />
+          <select><option value="">Add symbol</option>
+<option value="{ACCL}">{ACCL} – Accelerator</option>
+<option value="{BLOC}">{BLOC} – Blocker</option>
+<option value="{BLDS}">{BLDS} – Bloody Soul</option>
+<option value="{BKBN}">{BKBN} – Break Bonus</option>
+<option value="{BUZR}">{BUZR} – Buzzrender</option>
+<option value="{CATS}">{CATS} – Cat Soul</option>
+<option value="{DOGS}">{DOGS} – Dog Soul</option>
+<option value="{EVLS}">{EVLS} – Evil Soul</option>
+<option value="{FTEN}">{FTEN} – Fort Energy</option>
+<option value="{FSHV}">{FSHV} – Fushigiverse</option>
+<option value="{HOLS}">{HOLS} – Holy Soul</option>
+<option value="{HOFD}">{HOFD} – Holy Field</option>
+<option value="{KRFD}">{KRFD} – Kirifudash</option>
+<option value="{MGBB}">{MGBB} – Magibomber</option>
+<option value="{MAGS}">{MAGS} – Magic Soul</option>
+<option value="{MTCH}">{MTCH} – Marshall Touch</option>
+<option value="{MTMP}">{MTMP} – Metamorph</option>
+<option value="{NOCH}">{NOCH} – No Choice</option>
+<option value="{ONTM}">{ONTM} – Onitime</option>
+<option value="{OVDV}">{OVDV} – Overdrive</option>
+<option value="{SHTR}">{SHTR} – Shield Trigger</option>
+<option value="{SSTR}">{SSTR} – Super Shield Trigger</option>
+<option value="{SHFC}">{SHFC} – Shield Force</option>
+<option value="{SLSK}">{SLSK} – Silent Skill</option>
+<option value="{SLRC}">{SLRC} – Soul Recall</option>
+<option value="{ASRC}">{ASRC} – Annihilating Soul Recall</option>
+<option value="{SPCG}">{SPCG} – Space Charge</option>
+<option value="{STRB}">{STRB} – Strike Back</option>
+<option value="{SSTB}">{SSTB} – Super Strike Back</option>
+<option value="{SVVR}">{SVVR} – Survivor</option>
+<option value="{THRL}">{THRL} – Thrilling Three</option>
+<option value="{ULTS}">{ULTS} – Ultra Soul</option>
+<option value="{WVST}">{WVST} – Wave Striker</option>
+<option value="{WLDS}">{WLDS} – Wild Soul</option></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+
+      <label class="form-row-label" for="type">
+        Card Type
+</label>
+      <div class="form-row-content"><fieldset>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="creature" data-group="cardtype" data-toggle="cardtype" />Creature</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="spell" data-group="cardtype" data-toggle="cardtype" />Spell</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="evolution" data-group="cardtype" data-toggle="cardtype" />Evolution</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="psychic" data-group="cardtype" data-toggle="cardtype" />Psychic</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="exile" data-group="cardtype" data-toggle="cardtype" />Exile</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="dragheart" data-group="cardtype" data-toggle="cardtype" />Dragheart</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="forbidden" data-group="cardtype" data-toggle="cardtype" />Forbidden</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="final" data-group="cardtype" data-toggle="cardtype" />Final</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="gacharange" data-group="cardtype" data-toggle="cardtype" />Gacharange</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="neo" data-group="cardtype" data-toggle="cardtype" />Neo</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="crossgear" data-group="cardtype" data-toggle="cardtype" />Cross Gear</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="cell" data-group="cardtype" data-toggle="cardtype" />Cell</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="weapon" data-group="cardtype" data-toggle="cardtype" />Weapon</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="fortress" data-group="cardtype" data-toggle="cardtype" />Fortress</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="castle" data-group="cardtype" data-toggle="cardtype" />Castle</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="impulse" data-group="cardtype" data-toggle="cardtype" />Impulse</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="aura" data-group="cardtype" data-toggle="cardtype" />Aura</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="orega" data-group="cardtype" data-toggle="cardtype" />Orega</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="giga" data-group="cardtype" data-toggle="cardtype" />Giga</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="field" data-group="cardtype" data-toggle="cardtype" />Field</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="t2" data-group="cardtype" data-toggle="cardtype" />T2</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="d2" data-group="cardtype" data-toggle="cardtype" />D2</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="dg" data-group="cardtype" data-toggle="cardtype" />DG</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="dm" data-group="cardtype" data-toggle="cardtype" />DM</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="happiness" data-group="cardtype" data-toggle="cardtype" />Happiness</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="moonless night" data-group="cardtype" data-toggle="cardtype" />Moonless Night</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="core" data-group="cardtype" data-toggle="cardtype" />Core</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="nebula" data-group="cardtype" data-toggle="cardtype" />Nebula</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="zeron" data-group="cardtype" data-toggle="cardtype" />Zeron</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="artifact" data-group="cardtype" data-toggle="cardtype" />Artifact</label>
+
+<label class="advanced-search-checkbox small-columns"> <input type="checkbox" name="cardtype[]" value="mono" data-group="cardtype" data-toggle="cardtype" />Mono</label>
+
+          </fieldset>
+        <!--<div class="form-row-content-band">
+          <input type="text" placeholder="Enter or choose a type" autocorrect="off" spellcheck="false" />
+          <select><option value="">Types</option>
+<option data-pol="+" data-item="creature" value="creature">Creature</option>
+<option data-pol="+" data-item="spell" value="spell">Spell</option>
+<option data-pol="+" data-item="evolution" value="evolution">Evolution</option>
+<option data-pol="+" data-item="psychic" value="psychic">Psychic</option>
+<option data-pol="+" data-item="exile" value="exile">Exile</option>
+<option data-pol="+" data-item="dragheart" value="dragheart">Dragheart</option>
+<option data-pol="+" data-item="forbidden" value="forbidden">Forbidden</option>
+<option data-pol="+" data-item="final" value="final">Final</option>
+<option data-pol="+" data-item="gacharange" value="gacharange">Gacharange</option>
+<option data-pol="+" data-item="neo" value="neo">Neo</option>
+<option data-pol="+" data-item="crossGear" value="crossGear">Cross Gear</option>
+<option data-pol="+" data-item="cell" value="cell">Cell</option>
+<option data-pol="+" data-item="weapon" value="weapon">Weapon</option>
+<option data-pol="+" data-item="fortress" value="fortress">Fortress</option>
+<option data-pol="+" data-item="impulse" value="impulse">Impulse</option>
+<option data-pol="+" data-item="aura" value="aura">Aura</option>
+<option data-pol="+" data-item="orega" value="orega">Orega</option>
+<option data-pol="+" data-item="giga" value="giga">Giga</option>
+<option data-pol="+" data-item="field" value="field">Field</option>
+<option data-pol="+" data-item="t2" value="t2">T2</option>
+<option data-pol="+" data-item="d2" value="d2">D2</option>
+<option data-pol="+" data-item="dg" value="dg">DG</option>
+<option data-pol="+" data-item="dm" value="dm">DM</option>
+<option data-pol="+" data-item="happiness" value="happiness">Happiness</option>
+<option data-pol="+" data-item="moonless" value="moonless">Moonless Night</option>
+<option data-pol="+" data-item="core" value="core">Core</option>
+<option data-pol="+" data-item="nebula" value="nebula">Nebula</option>
+<option data-pol="+" data-item="zeron" value="zeron">Zeron</option>
+<option data-pol="+" data-item="artifact" value="artifact">Artifact</option>
+<option data-pol="+" data-item="mono" value="mono">Mono</option>
+            </select>
+        </div>-->
+
+        <div class="form-row-content-band">
+          <label class="advanced-search-checkbox">
+            <input type="checkbox" name="type_partial" id="type_partial" value="1" />
+            Allow partial type matches
+          </label>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="form-row">
+
+      <label class="form-row-label short">
+        Civilization(s)
+</label>
+      <div class="form-row-content">
+
+        <fieldset>
+          <div class="form-row-content-band short">
+                <select class="form-input auto" name="color_comparison" id="color_comparison"><option value="=">Exactly</option>
+                <option value="&gt;=">Including</option>
+                <option value="&lt;=">At most</option></select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="form-row-content-band">
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="civ[]" value="F" data-group="civ" data-toggle="civ" />
+                Fire
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="civ[]" value="W" data-group="civ" data-toggle="civ" />
+                Water
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="civ[]" value="N" data-group="civ" data-toggle="civ" />
+                Nature
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="civ[]" value="L" data-group="civ" data-toggle="civ" />
+                Light
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="civ[]" value="D" data-group="civ" data-toggle="civ" />
+                Darkness
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="civ[]" value="Z" data-group="civ" data-toggle="civ" />
+                Zero
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="civ[]" value="J" data-group="civ" data-toggle="civ" />
+                Jokers
+              </label>
+          </div>
+        </fieldset>
+
+       </div>
+
+    </div>
+
+    </div>
+
+    <div class="form-row">
+
+      <label class="form-row-label" for="mode">
+        Power
+</label>
+      <div>
+
+        <select name="mode" id="mode" class="form-input auto small-select"><option value="=">equal to</option>
+<option value="&lt;">less than</option>
+<option value="&gt;">greater than</option>
+<option value="&lt;=">less than or equal to</option>
+<option value="&gt;=">greater than or equal to</option>
+<option value="!=">not equal to</option></select>
+
+          <input type="number" name="power" id="power" class="" placeholder="Any value, e.g. “2000”" pattern="d*" />
+          <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="plus[]" value="F" data-group="plus" data-toggle="plus" />
+                +
+              </label>
+          <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="minus[]" value="minus" data-group="minus" data-toggle="minus" />
+                -
+              </label>
+        </div>
+
+      </div>
+
+    <div class="form-row">
+
+      <label class="form-row-label" for="set">
+        Sets
+</label>
+      <fieldset>
+          <div class="form-row-content-band">
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="set[]" value="dmrp01" data-group="set" data-toggle="set" />
+                DMRP-01
+              </label>
+          </div>
+        </fieldset>
+        <div class="form-row-content-band">
+          <label class="visuallyhidden" for="block">Block or Group</label>
+          <fieldset>
+          <div class="form-row-content-band">
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="block[]" value="DM" data-group="block" data-toggle="block" />
+                DM
+              </label>
+          </div>
+        </fieldset>
+        </div>
+      </div>
+
+    <div class="form-row">
+
+      <label class="form-row-label short">
+       Rarity
+</label>
+      <div class="form-row-content">
+
+        <fieldset>
+          <div class="form-row-content-band">
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="c" />
+                Common
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="u" />
+                Uncommon
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="r" />
+                Rare
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="vr" />
+                Very Rare
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="sr" />
+                Super Rare
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="vic" />
+                Victory Rare
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="dvic" />
+                Double Victory Rare
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="lc" />
+                Legend Card
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="flc" />
+                Forbidden Legend Card
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="mc" />
+                Master Card
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="mdoc" />
+                Master Dolszak Card
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="mdrc" />
+                Master Dragon Card
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="mhc" />
+                Master Hazard Card
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="msmc" />
+                Master Special Move Card
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="mzc" />
+                Master Zetto Card
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="dgr" />
+                DG Rare
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="scr" />
+                Secret Rare
+              </label>
+              <label class="advanced-search-checkbox small-columns">
+                <input type="checkbox" name="rarity[]" id="false" value="promo" />
+                Promotional
+              </label>
+          </div>
+        </fieldset>
+      </div>
+
+    </div>
+
+    <div class="form-row">
+
+      <label class="form-row-label" for="artist">
+        Artist
+</label>
+      <div class="form-row-content">
+        <div class="form-row-content-band">
+          <input type="text" name="artist" id="artist" placeholder="E.g. “MATSUMOTO EIGHT”" class="form-input" autocorrect="off" spellcheck="false" />
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form-row">
+
+      <label class="form-row-label" for="flavor">
+        Flavor Text
+</label>
+      <div class="form-row-content">
+
+        <div class="form-row-content-band">
+          <input type="text" name="flavor" id="flavor" class="form-input" placeholder="Any flavor text" autocorrect="off" spellcheck="false" />
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form-row">
+
+      <label class="form-row-label" for="language">
+        Language
+</label>
+      <div class="form-row-content">
+
+        <div class="form-row-content-band">
+          <select name="language" id="language" class="form-input"><option value="">Default</option>
+<option value="any">Any</option>
+<option value="en">English</option>
+<option value="es">Spanish</option>
+<option value="fr">French</option>
+<option value="de">German</option>
+<option value="it">Italian</option>
+<option value="pt">Portuguese</option>
+<option value="ja">Japanese</option>
+<option value="ko">Korean</option>
+<option value="ru">Russian</option>
+<option value="zhs">Simplified Chinese</option>
+<option value="zht">Traditional Chinese</option>
+<option value="he">Hebrew</option>
+<option value="la">Latin</option>
+<option value="grc">Ancient Greek</option>
+<option value="ar">Arabic</option>
+<option value="sa">Sanskrit</option>
+<option value="px">Phyrexian</option></select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form-row">
+
+      <label class="form-row-label">
+        Preferences
+</label>
+      <div class="form-row-content">
+
+        <div class="form-row-content-band">
+          <select class="form-input auto" name="as" id="as"><option value="grid">Display as Images</option>
+<option value="checklist">Display as Checklist</option>
+<option value="text">Display as Text Only</option>
+<option value="full">Display as Full</option></select>
+          <select class="form-input auto" name="order" id="order"><option value="name">Sort by Name</option>
+<option value="released">Sort by Release Date</option>
+<option value="set">Sort by Set/Number</option>
+<option value="rarity">Sort by Rarity</option>
+<option value="color">Sort by Civilization</option>
+<option value="usd">Sort by Cost</option>
+<option value="power">Sort by Power</option>
+<option value="artist">Sort by Artist Name</option></select>
+        </div>
+
+        <div class="form-row-content-band">
+          <label class="advanced-search-checkbox" for="unroll_search">
+            <input type="checkbox" name="unroll_search" id="unroll_search" value="1" />
+            Show all card prints
+</label>        </div>
+
+        </div>
+
+    </div>
+
+    <div class="form-row advanced-search-submit-bottom">
+      <div class="form-row-label"></div>
+      <button type="submit" class="button-n submit-n">
+        Search with these options
+</button>    </div>
+
+</form>
+      </div>
+
+  </body>
+</html>
