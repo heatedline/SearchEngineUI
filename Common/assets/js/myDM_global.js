@@ -1,1 +1,1 @@
-var serviceIP = "http://localhost:8080"; //Developer Local
+var serviceIP = "http://localhost:8080/dmContent/"; //Developer Local
