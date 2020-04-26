@@ -43,7 +43,7 @@ multi-input {
 
 .advanced-search-checkbox{height:26px;font-size:15px;align-items:center;margin:0;}
 
-.small-columns{width:50%;margin:0;}@media screen and (min-width: 440px){.advanced-search-checkbox.small-columns{width:33%}}@media screen and (min-width: 725px){.advanced-search-checkbox.small-columns{margin:0 16px 0 10px;width:auto}}
+.small-columns{width:50%;margin:0;}@media screen and (min-width: 440px){.advanced-search-checkbox.small-columns{width:33%}}@media screen and (min-width: 725px){.advanced-search-checkbox.small-columns{margin:0 16px 0 10px;width:auto;}}
 
 .form-row-content{width:80%;max-width:80%;}@media screen and (min-width: 740px){.form-row-content{width:80%}}
 
