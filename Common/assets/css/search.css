@@ -1,0 +1,113 @@
+/* Base styling */
+body {
+  width: 430px;
+  margin: 0 auto;
+  background-color: #472e45;
+  font-family: 'Raleway', sans-serif;
+}
+
+.search__container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.search__title {
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+}
+
+.search__input {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  /*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='201 -224 512 512' style='enable-background:new 201 -224 512 512;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Cg%3E%3Cg%3E%3Cpath class='st0' d='M709.9,254.7L561.1,106c28.2-34.8,45.2-79.1,45.2-127.3c0-111.8-90.9-202.7-202.7-202.7S201-133.1,201-21.3 s90.9,202.7,202.7,202.7c48.2,0,92.5-17,127.3-45.2l148.7,148.7c4.2,4.2,10.9,4.2,15.1,0l15.1-15.1 C714,265.6,714,258.9,709.9,254.7z M403.7,138.7c-88.2,0-160-71.8-160-160s71.8-160,160-160s160,71.8,160,160 S491.9,138.7,403.7,138.7z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.search__input::placeholder {
+  color: rgba(87, 87, 86, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.search__input:hover,
+.search__input:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+.credits__container {
+  margin-top: 24px;
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-90%, -50%);
+}
+
+.credits__text {
+  text-align: center;
+  font-size: 13px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #472e45;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+
+/*when hovering an item:*/
+
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+
+/*when navigating through the items using the arrow keys:*/
+
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}

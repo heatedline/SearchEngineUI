@@ -1,0 +1,58 @@
+p,
+body {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+label{
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+fieldset {
+   border:0 none;
+}
+
+div {
+    padding-top: 5px; padding-bottom: 5px;
+}
+
+button {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  height: 30px;
+  margin: 0 10px 10px 0;
+}
+
+multi-input {
+  display: inline-block;
+  margin: 0 10px 0px 0;
+}
+
+.form-row-label{font-weight: bold;}
+
+.wrapper{width: 100%; background-color:#472e45;}
+
+.inner-flex{padding-left:20px; align-items: center;display:table; margin-right:auto; margin-left:auto;width:80%;background-color:#ffffff;}
+
+.form-row{display:table; margin-right:auto; margin-left:auto; width:auto}
+
+.advanced-search-checkbox{height:26px;font-size:15px;align-items:center;margin:0;}
+
+.small-columns{width:50%;margin:0;}@media screen and (min-width: 440px){.advanced-search-checkbox.small-columns{width:33%}}@media screen and (min-width: 725px){.advanced-search-checkbox.small-columns{margin:0 16px 0 10px;width:auto;}}
+
+.form-row-content{width:80%;max-width:80%;}@media screen and (min-width: 740px){.form-row-content{width:80%}}
+
+.form-row-content-band{max-width:100%;align-items:center;padding:5px 0 5px 0}
+
+.form-input{margin-top: 0;background-color:#FEFEFE;border-radius:2px;border:1px solid #AEAEAE;color:#343242;}
+
+.form-input:focus{box-shadow:0px 0px 3px #AEAEAE;background-color:#FFF;border-color:#3b1260;border-bottom-color:#551A8B;border-right-color:#551A8B;outline:none !important}
+
+.form-input:disabled{color:#2f2e3c;background:rgba(0,0,0,0.06);cursor:not-allowed}
+.error .form-input{border-color:#bd2330}
+.form-input.wide{width:100%;max-width:500px}
